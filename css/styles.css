@@ -1,0 +1,452 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,100);
+
+body{
+  font-family: 'Lato', Arial, sans-serif;
+  z-index: 0;
+  font-size: 12px;
+  line-height: 21px;
+  color: #777;
+  background-color: #f7f7f7;
+}
+img{
+  width: 100%;
+}
+h2{
+  font-size: 72px;
+  font-weight: 300;
+  color: #000
+}
+h3{
+  font-size: 36px;
+  font-weight: 300;
+  color: #000;
+}
+.off-black-text{
+  color: #212121;
+}
+.padding80-right{
+  padding-right: 80px;
+}
+.padding80-left{
+  padding-left: 80px;
+}
+.text-right{
+  text-align: right;
+}
+.img-mobile{
+  display: none;
+}
+
+/* NAV-------------------------------------------------- */
+.header {
+  height: 60px;
+  line-height: 60px;
+  color: #000;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.6s all ease-out;
+  background-color: none;
+}
+.header.white{
+  background-color: #fff;
+}
+.header.font-white h1,.header.font-white h2,.header.font-white h3,.header.font-white h4,.header.font-white h5,.header.font-white p,.header.font-white a{
+  color: #fff !important;
+}
+
+.header__logo {
+  font-weight: bold;
+  float: left;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 24px;
+}
+.header ul{
+  float: right;
+  width: 100vw;
+}
+.header ul li{
+  display: inline;
+  margin-left: 40px;
+}
+.header ul li a{
+  text-transform: uppercase;
+  color: #212121;
+  opacity: .8;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 60px;
+  font-size: 11px;
+}
+.header ul li a:hover{
+  opacity: 1;
+  text-decoration: none;
+}
+.header .burger{
+  float: right;
+  display: none;
+}
+.header .burger span{
+  width: 30px;
+  margin: 15px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+  margin-right: 0px;
+  margin-top: 9px;
+
+}
+/*RESPONSIVE NAV-------------------------------*/
+@media only screen and (max-width: 769px) {
+  .header ul li{
+    display: block;
+    margin: 0;
+  }
+  .header ul li a{
+    font-size: 21px;
+  }
+  .header ul{
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    padding-left: 0;
+    float: none;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    padding-left: 0;
+  }
+  .header ul.closed{
+    float: none;
+    height: 0;
+  }
+  .header .burger{
+    display: block;
+    padding-top: 11px;
+  }
+  .header ul.open{
+    height: 100vh;
+    padding-top: 10%;
+  }
+}
+
+
+
+.hero{
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+}
+.hero h1{
+  font-size: 144px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #212121;
+}
+.hero h5{
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.hero img{
+  max-height: 50vh;
+  width: 100%;
+  margin: auto;
+}
+.hero .bottom{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.hero .image-hero{
+  width: 60%;
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+
+}
+
+/*RESPONSIVE hero-------------------------------*/
+@media only screen and (max-width: 769px) {
+  .hero h1{
+    font-size: 72px;
+  }
+  h2{
+    font-size: 48px;
+  }
+  .hero .bottom{
+    width: 100%;
+  }
+  .hero .image-hero{
+    width: 100%;
+  }
+}
+
+.container-fluid{
+  padding: 0;
+}
+.showcase-one-col{
+  height: 100vh;
+  overflow: hidden;
+}
+.showcase-one-col img{
+  z-index: 1;
+  width: 115%;
+}
+.showcase-one-col .content{
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin-top: 10%;
+}
+.showcase-two-col{
+  height: 50vh;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+.showcase-two-col .overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  transition: 0.6s all ease-out;
+}
+.showcase-two-col .content{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-30%);
+  opacity: 0;
+  transition: 0.6s all ease-out;
+}
+.showcase-two-col .content h3{
+  color: #fff;
+}
+.showcase-two-col:hover .content{
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.showcase-two-col:hover .overlay{
+  opacity: 0.7;
+}
+.white{
+  color: white;
+}
+
+.three-col-icon{
+  text-align: center;
+  padding: 80px 0;
+}
+.three-col-icon h3{
+  padding-bottom: 60px;
+}
+.three-col-icon img{
+  width: 150px;
+  padding-bottom: 30px;
+}
+.three-col-icon .col{
+  padding: 30px;
+}
+
+/* FOOTER --------------------------------------------------- */
+footer{
+  background-color: #212121;
+  padding: 40px 0;
+  color: #fff;
+}
+footer h3{
+  font-weight: 600;
+  color: #fff;
+}
+
+/* about --------------------------------------------------- */
+.hero-small{
+  height: 50vh;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.hero-small .container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero-small h2{
+  left: 0;
+  right: 0;
+  font-weight: 100;
+}
+.tab-nav{
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.tab-nav ul{
+  padding: 0;
+}
+.tab-nav li{
+  display: inline;
+  margin: 0 40px;
+}
+.tab-nav li a{
+  text-transform: uppercase;
+  color: #212121;
+  opacity: .4;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 60px;
+  font-size: 11px;
+}
+.tab-nav li a:hover{
+  text-decoration: none;
+  opacity: 1;
+}
+a.selected{
+  opacity: 1 !important;
+}
+
+/*RESPONSIVE TABS-------------------------------*/
+@media only screen and (max-width: 769px) {
+  .tab-nav ul li{
+    margin: 0;
+  }
+  .tab-nav ul li.left{
+    float: left;
+  }
+  .tab-nav ul li.right{
+    float: right;
+  }
+}
+
+.about.alternate-two-col .clearfix{
+  height: 340px;
+  width: 100%;
+  overflow: hidden;
+}
+.alternate-two-col .row{
+  padding: 30px 0;
+}
+.about .image-profile{
+  height: 300px;
+  width: 100%;
+}
+.alternate-two-col h1{
+  font-weight: 700;
+  color: #212121;
+}
+.alternate-two-col h4,h5{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #212121;
+}
+.alternate-two-col h4{
+  font-size: 21px;
+  line-height: 1.4;
+}
+.alternate-two-col h5{
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.alternate-two-col .content{
+  margin-top: 5%;
+}
+.alternate-two-col{
+  margin-bottom: 60px;
+}
+
+/*RESPONSIVE TWO COL-------------------------------*/
+@media only screen and (max-width: 769px) {
+  .alternate-two-col *{
+    text-align: center;
+  }
+  .padding80-left{
+    padding: 15px;
+  }
+  .padding80-right{
+    padding: 15px;
+  }
+}
+
+
+.quote{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.one-col-center{
+  text-align: center;
+  padding: 30px 0;
+}
+.one-col-center h4{
+  color: #212121;
+  text-transform: uppercase;
+}
+.two-col{
+  margin-bottom: 60px;
+}
+.two-col .row{
+  padding: 30px 0;
+}
+.two-col h4,h5{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #212121;
+}
+.two-col p{
+  padding-top: 5px;
+}
+
+#timeline{
+  width: 1px;
+  background-color: #212121;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+#timeline .point{
+  position: relative;
+  margin-bottom: 100px;
+}
+#timeline .point img{
+  height: 30px;
+  width: 30px;
+}
+
+
+
+/* IMAGES --------------------------------------------------- */
+.image-overview{
+  background-image: url('../img/vr-scene3.jpg');
+  background-size: cover;
+}
+.image-ar{
+  background-image: url('../img/vr-scene4.jpg');
+  background-size: cover;
+}
+.image-vr{
+  background-image: url('../img/vr-scene5.jpg');
+  background-size: cover;
+}
+.image-hero-about{
+  background-image: url('../img/about/hero.jpeg');
+  background-size: cover;
+}
+.image-hero{
+  background-image: url('../img/hero3.jpg');
+}
