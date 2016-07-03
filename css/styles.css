@@ -66,7 +66,6 @@ h3{
 }
 .header ul{
   float: right;
-  width: 100vw;
 }
 .header ul li{
   display: inline;
@@ -118,6 +117,7 @@ h3{
     text-align: center;
     background-color: #fff;
     padding-left: 0;
+    width: 100vw;
   }
   .header ul.closed{
     float: none;
@@ -170,7 +170,7 @@ h3{
   height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   margin: auto;
 
 }
@@ -411,21 +411,13 @@ a.selected{
   padding-top: 5px;
 }
 
-#timeline{
-  width: 1px;
-  background-color: #212121;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 10%;
+/*CONTACT FORM*/
+.contactForm{
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
-#timeline .point{
-  position: relative;
-  margin-bottom: 100px;
-}
-#timeline .point img{
-  height: 30px;
-  width: 30px;
+#contactForm input, #contactForm textarea{
+  width: 100%;
 }
 
 
@@ -447,6 +439,29 @@ a.selected{
   background-image: url('../img/about/hero.jpeg');
   background-size: cover;
 }
+.image-hero-contact{
+  background-image: url('../img/contact/hero.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
 .image-hero{
   background-image: url('../img/hero3.jpg');
 }
+
+/* IMAGES --------------------------------------------------- */
+.gradient1{
+  background: linear-gradient(117deg,#560000,#000042);
+
+}
+
+
+
+background: #ff0084; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ff0084 , #33001b); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ff0084 , #33001b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+background: #AA076B; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #AA076B , #61045F); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #AA076B , #61045F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
